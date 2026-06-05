@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body-md overflow-x-hidden;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.folk-border {
+  background-image: radial-gradient(circle at 10px 10px, #b90c17 2px, transparent 0);
+  background-size: 20px 20px;
+  height: 16px;
+  width: 100%;
+}
+
+.bunting-flag {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
+}
+
+.ribbon-swallowtail {
+  clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
+}
+
+.floating-confetti {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.hand-lettered {
+  font-family: 'Rubik', sans-serif;
+  transform: rotate(-2deg);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
