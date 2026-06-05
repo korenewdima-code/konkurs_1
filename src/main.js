@@ -1,13 +1,14 @@
 import './style.css';
 
-const participateUrl = 'https://edimdoma.ru';
+const participateUrl = 'https://www.edimdoma.ru/create/retsept';
+const shareFallbackUrl = 'https://edimdoma.ru';
 const shareTitle =
-  'Конкурс рецептов Едим Дома — выиграй аэрогриль за лучший рецепт до 30 минут!';
+  'Конкурс рецептов Едим Дома — выиграй аэрогриль за лучший рецепт до 45 минут!';
 
 function getShareUrl() {
   const { hostname, href } = window.location;
   if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '') {
-    return participateUrl;
+    return shareFallbackUrl;
   }
   return href.split('#')[0];
 }
