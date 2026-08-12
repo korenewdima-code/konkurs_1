@@ -3,7 +3,7 @@ import './style.css';
 const participateUrl = 'https://www.edimdoma.ru/create/retsept';
 const shareFallbackUrl = 'https://edimdoma.ru';
 const shareTitle =
-  'Конкурс рецептов Едим Дома — выиграй аэрогриль за лучший рецепт до 45 минут!';
+  'Конкурс «Вкус Родины: стань летописцем народной кухни» — Едим Дома!';
 
 function getShareUrl() {
   const { hostname, href } = window.location;
