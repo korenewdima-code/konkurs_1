@@ -55,6 +55,8 @@ export default {
         saffron: '#ffb800',
         paprika: '#b90c17',
         cocoa: '#301305',
+        terracotta: '#993C1D',
+        'terracotta-dark': '#7A2E15',
       },
       borderRadius: {
         DEFAULT: '0.25rem',
@@ -83,6 +85,7 @@ export default {
         'display-lg': ['Rubik', 'sans-serif'],
         'label-lg': ['Work Sans', 'sans-serif'],
         'headline-lg-mobile': ['Rubik', 'sans-serif'],
+        accent: ['Yeseva One', 'serif'],
       },
       fontSize: {
         'headline-md': ['24px', { lineHeight: '32px', fontWeight: '600' }],
