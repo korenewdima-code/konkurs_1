@@ -33,6 +33,13 @@ function buildShareLink(network) {
 
 document.querySelectorAll('[data-participate]').forEach((el) => {
   el.addEventListener('click', (e) => {
+    // Yandex.Metrika: клик по кнопке «Участвовать» ведёт на форму добавления
+    // рецепта на edimdoma.ru — считаем это и кликом по кнопке, и переходом
+    // в раздел с рецептами на сайте.
+    if (typeof ym === 'function') {
+      ym(759060, 'reachGoal', 'click_participate');
+      ym(759060, 'reachGoal', 'click_to_site');
+    }
     if (el.tagName === 'A' && el.getAttribute('href')?.startsWith('http')) return;
     e.preventDefault();
     window.location.href = participateUrl;
